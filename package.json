@@ -1,0 +1,27 @@
+{
+  "name": "cordova-plugin-rest-banxico",
+  "version": "0.1.0",
+  "description": "",
+  "cordova": {
+    "id": "cordova-plugin-rest-banxico",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erickGoJi/Plugin-Rest.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "NA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erickGoJi/Plugin-Rest/issues"
+  },
+  "homepage": "https://github.com/erickGoJi/Plugin-Rest#readme"
+}
