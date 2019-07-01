@@ -1,7 +1,11 @@
 package cordova.plugin.rest.banxico;
 
-import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaInterface;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CordovaWebView;
+import org.apache.cordova.PluginResult;
+import org.apache.cordova.PluginResult.Status;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -20,10 +24,13 @@ import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
+import android.content.Context;
 /**
  * This class echoes a string called from JavaScript.
  */
 public class RESTBanxico extends CordovaPlugin {
+
+    Context context;
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -47,7 +54,7 @@ public class RESTBanxico extends CordovaPlugin {
     }
 
     private void postVolley(String endPoint,String requestBody,CallbackContext callbackContext){
-        Context context = this.cordova.getActivity().getApplicationContext();
+        this.context = IS_AT_LEAST_LOLLIPOP ? cordova.getActivity().getWindow().getContext() : cordova.getActivity().getApplicationContext();
         RequestQueue MyRequestQueue = Volley.newRequestQueue(context);
         final String API_URL = "https://www.banxico.org.mx/"+endPoint;
         //final String requestBody = "d= {'nc': '5551359763','idH': '0cdbf9419ccf46c5','ia': {'so': 'Android','vSO': '9','fab': 'moto','mod': 'moto g(6) plus'}}";
