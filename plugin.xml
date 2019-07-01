@@ -1,13 +1,15 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version='1.0' encoding='UTF-8'?>
 <plugin id="cordova-plugin-rest-banxico" version="0.1.0" 
-    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+ >
     <name>RESTBanxico</name>
+    
+    <platform name="android">
     <js-module name="RESTBanxico" src="www/RESTBanxico.js">
+            <runs/>
         <clobbers target="RESTBanxico" />
     </js-module>
-    <platform name="android">
-        <config-file parent="/*" target="res/xml/config.xml">
+        <config-file parent="/*" target="config.xml">
             <feature name="RESTBanxico">
                 <param name="android-package" value="cordova.plugin.rest.banxico.RESTBanxico" />
             </feature>

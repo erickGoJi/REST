@@ -1,4 +1,4 @@
-package cordova.plugin.rest.banxico.RESTBanxico;
+package cordova.plugin.rest.banxico;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
