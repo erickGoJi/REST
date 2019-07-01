@@ -8,3 +8,8 @@ buildscript {
         classpath 'com.android.tools.build:gradle:3.3.2'
     }
 }
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+
