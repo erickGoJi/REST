@@ -32,7 +32,7 @@ public class RESTBanxico extends CordovaPlugin {
             this.coolMethod(message, callbackContext);
             return true;
         } else if (action.equals("sendPost")){
-            this.postVolley(args.getString(0), args.getString(1l), callbackContext);
+            this.postVolley(args.getString(0), args.getString(1), callbackContext);
             return true;
         }
         return false;
