@@ -77,7 +77,7 @@ public class RESTBanxico extends CordovaPlugin {
             @Override
             public void onErrorResponse(VolleyError error) {
                 //This code is executed if there is an error.
-                callbackContext.error(error);
+                callbackContext.error(error.toString());
             }
         }) {
             @Override
