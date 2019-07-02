@@ -37,7 +37,7 @@ public class RESTBanxico extends CordovaPlugin {
 
     Context context;
     private static  boolean IS_AT_LEAST_LOLLIPOP = Build.VERSION.SDK_INT >= 21;
-    CallbackContext callbackContext;
+    final CallbackContext callbackContext;
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("coolMethod")) {
@@ -59,7 +59,7 @@ public class RESTBanxico extends CordovaPlugin {
         }
     }
 
-    private void postVolley(String endPoint,String requestBody,CallbackContext callbackContext){
+    private void postVolley(String endPoint,final String requestBody,CallbackContext callbackContext){
         this.context = IS_AT_LEAST_LOLLIPOP ? cordova.getActivity().getWindow().getContext() : cordova.getActivity().getApplicationContext();
         RequestQueue MyRequestQueue = Volley.newRequestQueue(context);
         final String API_URL = "https://www.banxico.org.mx/"+endPoint;
