@@ -35,7 +35,7 @@ import android.util.Log;
  */
 public class RESTBanxico extends CordovaPlugin {
 
-    final Context context;
+    Context context;
     private static  boolean IS_AT_LEAST_LOLLIPOP = Build.VERSION.SDK_INT >= 21;
     final CallbackContext callbackContext;
     @Override
