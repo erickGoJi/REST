@@ -35,9 +35,9 @@ import android.util.Log;
  */
 public class RESTBanxico extends CordovaPlugin {
 
-    Context context;
+    final Context context;
     private static  boolean IS_AT_LEAST_LOLLIPOP = Build.VERSION.SDK_INT >= 21;
-    CallbackContext callbackContext;
+    final CallbackContext callbackContext;
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("coolMethod")) {
