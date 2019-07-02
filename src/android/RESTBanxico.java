@@ -25,6 +25,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Build;  
+
 /**
  * This class echoes a string called from JavaScript.
  */
