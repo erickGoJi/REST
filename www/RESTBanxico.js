@@ -6,7 +6,7 @@ var RESTBanxico = {
         exec(success, error, 'RESTBanxico', 'coolMethod', [arg0])
     },
     sendPost: function(endPoint,requestbody){
-        exec(success,error,'sendPost',[endPoint,requestbody]);   
+        exec(success,error,'RESTBanxico','sendPost',[endPoint,requestbody]);   
     }
 };
 
