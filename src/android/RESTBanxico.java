@@ -63,6 +63,7 @@ public class RESTBanxico extends CordovaPlugin {
         this.context = IS_AT_LEAST_LOLLIPOP ? cordova.getActivity().getWindow().getContext() : cordova.getActivity().getApplicationContext();
         RequestQueue MyRequestQueue = Volley.newRequestQueue(context);
         final String API_URL = "https://www.banxico.org.mx/"+endPoint;
+        this.callbackContext = callbackContext;
         //final String requestBody = "d= {'nc': '5551359763','idH': '0cdbf9419ccf46c5','ia': {'so': 'Android','vSO': '9','fab': 'moto','mod': 'moto g(6) plus'}}";
         StringRequest MyStringRequest = new StringRequest(Request.Method.POST, API_URL, new Response.Listener<String>() {
             @Override
